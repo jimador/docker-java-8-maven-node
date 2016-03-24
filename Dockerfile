@@ -4,10 +4,13 @@ MAINTAINER James Dunnam "jamesd1184@gmail.com"
 
 ENV MAVEN_VERSION 3.3.9
 
+RUN echo deb http://archive.ubuntu.com/ubuntu precise universe > /etc/apt/sources.list.d/universe.list
+RUN apt-get update && apt-get install -y wget git curl zip monit openssh-server git iptables ca-certificates daemon net-tools
+
 #Install Oracle JDK 8
 #--------------------
 RUN echo "# Installing Oracle JDK 8" && \
-    sudo apt-get install -y python-software-properties debconf-utils && \
+    sudo apt-get install -y software-properties-common debconf-utils && \
     sudo add-apt-repository -y ppa:webupd8team/java && \
     sudo apt-get update && \
     echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections && \
@@ -44,6 +47,3 @@ RUN echo "# Installing Nodejs" && \
             rm -f /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
             mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/ /srv/var/phantomjs && \
             ln -s /srv/var/phantomjs/bin/phantomjs /usr/bin/phantomjs
-
-RUN echo deb http://archive.ubuntu.com/ubuntu precise universe > /etc/apt/sources.list.d/universe.list
-RUN apt-get update && apt-get install -y wget git curl zip monit openssh-server git iptables ca-certificates daemon net-tools
