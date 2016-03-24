@@ -37,4 +37,4 @@ RUN echo "# Installing Nodejs" && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
     apt-get install nodejs build-essential -y && \
     npm install -g npm@latest && \
-    npm install -g bower grunt grunt-cli && \
+    npm install -g bower grunt grunt-cli
