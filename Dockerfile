@@ -33,11 +33,8 @@ VOLUME /var/lib/maven
 
 # Node related
 # ------------
-ENV PHANTOMJS_VERSION 2.1.1
-
 RUN echo "# Installing Nodejs" && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
     apt-get install nodejs -y && \
     npm install -g npm@latest && \
     npm install -g bower grunt grunt-cli && \
-    
