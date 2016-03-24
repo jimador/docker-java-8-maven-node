@@ -26,7 +26,7 @@ RUN echo "# Installing Maven " && echo ${MAVEN_VERSION} && \
     http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz && \
     mkdir -p $MAVEN_ROOT && \
     tar xzf /tmp/apache-maven-$MAVEN_VERSION.tar.gz -C $MAVEN_ROOT && \
-    ln -s $MAVEN_ROOT/$MAVEN_VERSION/bin/mvn /usr/local/bin && \
+    ln -s $MAVEN_HOME/bin/mvn /usr/local/bin && \
     rm -f /tmp/apache-maven-$MAVEN_VERSION.tar.gz
 
 VOLUME /var/lib/maven
