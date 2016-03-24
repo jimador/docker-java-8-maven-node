@@ -39,6 +39,7 @@ RUN echo "# Installing Nodejs" && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
     apt-get install nodejs build-essential -y && \
     npm install -g npm@latest && \
+    npm install -g bower grunt grunt-cli && \
     echo "# Phantomjs" && \
       mkdir -p /srv/var && \
       wget -q --no-check-certificate -O /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
