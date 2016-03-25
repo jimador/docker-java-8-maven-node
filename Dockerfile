@@ -38,7 +38,7 @@ ENV PHANTOMJS_VERSION 1.9.8
 RUN echo "# Installing Nodejs" && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
     apt-get install nodejs build-essential -y && \
-    npm set strict-ssl false &&
+    npm set strict-ssl false && \
     npm install -g npm@latest && \
     npm install -g bower grunt grunt-cli && \
     echo "# Phantomjs" && \
