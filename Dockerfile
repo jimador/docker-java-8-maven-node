@@ -41,10 +41,4 @@ RUN echo "# Installing Nodejs" && \
     npm set strict-ssl false && \
     npm install -g npm@latest && \
     npm install -g bower grunt grunt-cli && \
-    echo "# Phantomjs" && \
-      wget -q --no-check-certificate -O /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 \
-      https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
-      tar -xjf /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C /tmp && \
-      rm -f /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
-      mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/ /usr/lib/node_modules/phantomjs && \
-      ln -s /usr/lib/node_modules/phantomjs /usr/bin/phantomjs
+    npm cache clear
