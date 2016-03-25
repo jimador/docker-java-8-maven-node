@@ -33,7 +33,6 @@ VOLUME /var/lib/maven
 
 # Node related
 # ------------
-ENV PHANTOMJS_VERSION 1.9.8
 
 RUN echo "# Installing Nodejs" && \
     curl -sL https://deb.nodesource.com/setup | bash - && \
@@ -41,4 +40,6 @@ RUN echo "# Installing Nodejs" && \
     npm set strict-ssl false && \
     npm install -g npm@latest && \
     npm install -g bower grunt grunt-cli && \
-    npm cache clear
+    npm cache clear -f && \
+    npm install -g n && \
+    n stable
