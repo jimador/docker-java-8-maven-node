@@ -46,5 +46,5 @@ RUN echo "# Installing Nodejs" && \
       https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
       tar -xjf /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 -C /tmp && \
       rm -f /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64.tar.bz2 && \
-      mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/ /usr/lib/phantomjs && \
-      ln -s /usr/lib/phantomjs/bin/phantomjs /usr/bin/phantomjs
+      mv /tmp/phantomjs-$PHANTOMJS_VERSION-linux-x86_64/ /usr/lib/node_modules/phantomjs && \
+      ln -s /usr/lib/node_modules/phantomjs /usr/bin/phantomjs
