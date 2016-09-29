@@ -1,4 +1,4 @@
-[![](https://imagelayers.io/badge/jimador/docker-jdk-8-maven-node:latest.svg)](https://imagelayers.io/?images=jimador/docker-jdk-8-maven-node:latest 'Get your own badge on imagelayers.io')
+[![](https://images.microbadger.com/badges/image/jimador/docker-jdk-8-maven-node.svg)](https://microbadger.com/images/jimador/docker-jdk-8-maven-node "Get your own image badge on microbadger.com")
 
 ## Dockerized Java 8, Maven 3.3.9, and NodeJS Enviroment for full stack Java web app builds
 
