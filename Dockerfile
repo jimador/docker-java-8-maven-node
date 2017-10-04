@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER James Dunnam "jamesd1184@gmail.com"
 
-ENV MAVEN_VERSION 3.3.9
+ENV MAVEN_VERSION 3.5.0
 
 RUN echo deb http://archive.ubuntu.com/ubuntu precise universe > /etc/apt/sources.list.d/universe.list
 RUN apt-get update && apt-get install -y wget git curl zip monit openssh-server git iptables ca-certificates daemon net-tools libfontconfig-dev
